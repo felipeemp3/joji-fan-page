@@ -19,32 +19,69 @@ Un proyecto web desarrollado con **Next.js 16**, **TypeScript** y **TailwindCSS*
 
 ## 🧩 Estructura del proyecto
 
-app/
-├─ api/
-│ ├─ spotify/
-│ │ ├─ token/route.ts → Obtiene el token de autenticación de Spotify
-│ │ └─ tracks/route.ts → Devuelve los top tracks de Joji (API local)
-│ ├─ layout.tsx → Estructura base del sitio
-│ ├─ page.tsx → Página principal
+joji-page/
 │
-├─ components/
-│ ├─ ui/
-│ │ ├─ albums-sidebar.tsx → Muestra los álbumes de Joji
-│ │ ├─ biography-section.tsx → Biografía del artista
-│ │ ├─ hero-section.tsx → Portada principal con imagen destacada
-│ │ ├─ music-player.tsx → Reproductor de canciones
-│ │ ├─ top-tracks.tsx → Lista de top tracks (vía API)
-│ │ └─ footer.tsx → Pie de página
+├── app/
+│   ├── api/
+│   │   ├── spotify/
+│   │   │   ├── token/
+│   │   │   │   └── route.ts       # Devuelve el token de Spotify
+│   │   │   └── tracks/
+│   │   │       └── route.ts       # Devuelve los top tracks de Joji
+│   │   └── hello/route.ts         # (Opcional) Ejemplo de endpoint simple
+│   │
+│   ├── layout.tsx                  # Layout principal de toda la app
+│   ├── page.tsx                    # Página principal (Home)
+│   ├── globals.css                 # Estilos globales
+│   │
+│   ├── (sections)/                 # 🧩 Secciones grandes de la página
+│   │   ├── hero-section.tsx        # Encabezado principal con imagen de Joji
+│   │   ├── biography-section.tsx   # Biografía con texto y foto
+│   │   ├── top-tracks-section.tsx  # Lista de Top Tracks (con Spotify API)
+│   │   └── albums-section.tsx      # Visualización de álbumes
 │
-├─ public/
-│ └─ audio/ → Archivos MP3 e imágenes de álbumes
+├── components/
+│   ├── ui/                         # 🌈 Componentes reutilizables y visuales
+│   │   ├── music-player.tsx
+│   │   ├── footer.tsx
+│   │   ├── navbar.tsx
+│   │   └── theme-provider.tsx
+│   │
+│   └── layout/                     # 🧱 Componentes estructurales
+│       ├── container.tsx
+│       └── section-wrapper.tsx
 │
-├─ styles/
-│ └─ globals.css → Estilos globales de Tailwind
+├── hooks/                          # 🪝 Custom hooks (si los necesitas)
+│   └── useSpotifyToken.ts
 │
-├─ .env.local → Variables de entorno de Spotify
-└─ package.json
----
+├── lib/                            # 🧠 Lógica auxiliar (helpers o utils)
+│   ├── spotify.ts                   # Funciones para interactuar con Spotify API
+│   └── format.ts                    # Funciones para formato de texto o fecha
+│
+├── public/
+│   ├── audio/                      # 🎵 Archivos locales MP3
+│   │   ├── glimpse-of-us.mp3
+│   │   ├── slow-dancing.mp3
+│   │   └── run.mp3
+│   │
+│   ├── images/                     # 🖼️ Portadas y fotos
+│   │   ├── joji-ballads-1.jpg
+│   │   ├── joji-nectar.jpg
+│   │   ├── joji-smithereens.jpg
+│   │   └── placeholder-logo.png
+│   │
+│   └── favicon.ico
+│
+├── styles/
+│   ├── globals.css                 # Estilos base
+│   └── animations.css              # (Opcional) Efectos personalizados
+│
+├── .env.local                      # Variables de entorno (Spotify)
+├── tailwind.config.ts
+├── tsconfig.json
+├── package.json
+└── README.md
+
 
 ## ⚙️ Instalación
 

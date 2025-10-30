@@ -20,31 +20,30 @@ Un proyecto web desarrollado con **Next.js 16**, **TypeScript** y **TailwindCSS*
 ## 🧩 Estructura del proyecto
 
 app/
- ├─ api/
- │   ├─ spotify/
- │   │   ├─ token/route.ts     → Obtiene el token de autenticación de Spotify
- │   │   └─ tracks/route.ts    → Devuelve los top tracks de Joji (API local)
- │   ├─ layout.tsx             → Estructura base del sitio
- │   ├─ page.tsx               → Página principal
- │
- ├─ components/
- │   ├─ ui/
- │   │   ├─ albums-sidebar.tsx    → Muestra los álbumes de Joji
- │   │   ├─ biography-section.tsx → Biografía del artista
- │   │   ├─ hero-section.tsx      → Portada principal con imagen destacada
- │   │   ├─ music-player.tsx      → Reproductor de canciones
- │   │   ├─ top-tracks.tsx        → Lista de top tracks (vía API)
- │   │   └─ footer.tsx            → Pie de página
- │
- ├─ public/
- │   └─ audio/                   → Archivos MP3 e imágenes de álbumes
- │
- ├─ styles/
- │   └─ globals.css              → Estilos globales de Tailwind
- │
- ├─ .env.local                   → Variables de entorno de Spotify
- └─ package.json
-
+├─ api/
+│ ├─ spotify/
+│ │ ├─ token/route.ts → Obtiene el token de autenticación de Spotify
+│ │ └─ tracks/route.ts → Devuelve los top tracks de Joji (API local)
+│ ├─ layout.tsx → Estructura base del sitio
+│ ├─ page.tsx → Página principal
+│
+├─ components/
+│ ├─ ui/
+│ │ ├─ albums-sidebar.tsx → Muestra los álbumes de Joji
+│ │ ├─ biography-section.tsx → Biografía del artista
+│ │ ├─ hero-section.tsx → Portada principal con imagen destacada
+│ │ ├─ music-player.tsx → Reproductor de canciones
+│ │ ├─ top-tracks.tsx → Lista de top tracks (vía API)
+│ │ └─ footer.tsx → Pie de página
+│
+├─ public/
+│ └─ audio/ → Archivos MP3 e imágenes de álbumes
+│
+├─ styles/
+│ └─ globals.css → Estilos globales de Tailwind
+│
+├─ .env.local → Variables de entorno de Spotify
+└─ package.json
 ---
 
 ## ⚙️ Instalación
